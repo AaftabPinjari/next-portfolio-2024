@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import TransitionProvider from "@/components/transitionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,15 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full h-full lg:h-screen bg-gradient-to-b from-blue-100 to-red-100">
-          <div className="h-24">
-            <Navbar />
-          </div>
-          {/*to make th total height 100vh*/}
-          <div className="h-[calculate(100vh-6rem)] lg:pt-10">
-            {children}
-          </div>
-        </div>
+        {/*to provide transitions to the page  we needed to use animation presence component of framer motion 
+        it needs to use hooks so it need use client functionality*/}
+        <TransitionProvider>
+          {children}
+        </TransitionProvider>
       </body>
     </html>
   );
