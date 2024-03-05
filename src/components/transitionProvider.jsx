@@ -1,5 +1,5 @@
 "use client"
-import { AnimatePresence, easeOut, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import Navbar from './navbar'
 import { usePathname } from 'next/navigation'
@@ -9,7 +9,7 @@ function TransitionProvider({ children }) {
     const pathName = usePathname();
     return (
         <AnimatePresence mode="wait">
-            <div key={pathName} className="w-full h-full lg:h-screen bg-gradient-to-b from-blue-100 to-red-100">
+            <div key={pathName} className="w-full h-full  bg-gradient-to-b from-blue-100 to-red-100">
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-b-[100px] z-40'
                     animate={{ height: "0vh" }}
@@ -34,7 +34,7 @@ function TransitionProvider({ children }) {
                     <Navbar />
                 </div>
                 {/*to make th total height 100vh*/}
-                <div className="h-[calculate(100vh-6rem)] lg:pt-10">
+                <div className="h-[calculate(100vh-6rem)] lg:py-10  ">
                     {children}
                 </div>
             </div>

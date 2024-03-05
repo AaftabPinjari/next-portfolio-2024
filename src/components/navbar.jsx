@@ -113,7 +113,7 @@ const Navbar = () => {
                 </button>
                 {/*Menu list*/}
                 {open &&
-                    <motion.div variants={menuListVariants} initial="closed" animate="opened" className="absolute top-0 left-0 bg-black h-screen w-screen text-xl text-white flex flex-col items-center justify-center gap-8 z-30">
+                    <motion.div variants={menuListVariants} initial="closed" animate="opened" className="absolute top-0 left-0  bg-black h-[130vh] w-full text-xl text-white flex flex-col items-center justify-center gap-8 z-30">
                         {links.map(link => (
                             <motion.div variants={listItemVariants} key={link.title} >
                                 <Link href={link.url}>{link.title}</Link>
