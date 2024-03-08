@@ -9,9 +9,9 @@ const AboutPage = () => {
     return (
         <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0vh" }} transition={{ duration: 1 }}>
             {/* Container */}
-            <div className="">
+            <div className="pb-10">
                 {/* Text Container */}
-                <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
+                <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 ">
                     {/* Biography Container */}
                     <div className="flex flex-col justify-center gap-12">
                         {/* Biography Title */}
@@ -99,7 +99,85 @@ const AboutPage = () => {
                         </motion.svg>
                     </div>
                     {/* Experience Container */}
-                    <div className="">EXPERIENCE</div>
+                    <div className="flex flex-col justify-center gap-12">
+                        {/* EXPERIENCE Title */}
+                        <h1 className="text-2xl font-bold">EXPERIENCE</h1>
+                        {/* EXPERIENCE List */}
+                        <div className="">
+                            {/* EXPERIENCE List Item */}
+                            <div className="flex justify-between h-48">
+                                {/* Left */}
+                                <div className="w-1/3">
+                                    {/* Job Title */}
+                                    <div className="bg-white font-semibold p-3 text-center rounded-b-lg rounded-s-lg">Systems Engineer</div>
+                                    {/* Job Desc */}
+                                    <div className="p-3 text-sm italic">Working as a Front-End Developer</div>
+                                    {/* Job Duration */}
+                                    <div className="text-red-400 font-semibold text-sm p-3">2021-Present</div>
+                                    {/* Job Company */}
+                                    <div className="p-1 text-center text-black font-semibold bg-white rounded-lg w-fit">Infosys</div>
+                                </div>
+                                {/* center */}
+                                <div className="w-1/6">
+                                    {/* Line */}
+                                    <div className="w-1 h-full bg-gray-600 rounded relative">
+                                        {/* circle */}
+                                        <div className="absolute w-5 h-5 rounded-full bg-white ring-4 ring-red-400 -left-2"></div>
+                                    </div>
+                                </div>
+                                {/* right */}
+                                <div className="w-1/3"></div>
+                            </div>
+                            {/* EXPERIENCE List Item */}
+                            <div className="flex justify-between h-48">
+                                {/* Left */}
+                                <div className="w-1/3"></div>
+                                {/* center */}
+                                <div className="w-1/6">
+                                    {/* Line */}
+                                    <div className="w-1 h-full bg-gray-600 rounded relative">
+                                        {/* circle */}
+                                        <div className="absolute w-5 h-5 rounded-full bg-white ring-4 ring-red-400 -left-2"></div>
+                                    </div>
+                                </div>
+                                {/* right */}
+                                <div className="w-1/3">
+                                    {/* Job Title */}
+                                    <div className="bg-white font-semibold text-center p-3 rounded-b-lg rounded-s-lg">Bachelors in Engineering</div>
+                                    {/* Job Desc */}
+                                    <div className="p-3 text-sm italic">Completed with 8.92 C.G.P.A</div>
+                                    {/* Job Duration */}
+                                    <div className="text-red-400 font-semibold text-sm p-3">2017-2021</div>
+                                    {/* Job Company */}
+                                    <div className="p-1 text-black text-center font-semibold bg-white rounded-lg w-fit">SKNCOE</div>
+                                </div>
+                            </div>
+                            {/* EXPERIENCE List Item */}
+                            <div className="flex justify-between h-48">
+                                {/* Left */}
+                                <div className="w-1/3">
+                                    {/* Job Title */}
+                                    <div className="bg-white font-semibold text-center p-3 rounded-b-lg rounded-s-lg">10th and 12th</div>
+                                    {/* Job Desc */}
+                                    <div className="p-3 text-sm italic">Completed with 9.8 C.G.P.A and 82 % Recpectively</div>
+                                    {/* Job Duration */}
+                                    <div className="text-red-400 font-semibold text-sm p-3">2015 and 2017</div>
+                                    {/* Job Company */}
+                                    <div className="p-1 text-black text-center font-semibold bg-white rounded-lg w-fit">Macro Vision Academy</div>
+                                </div>
+                                {/* center */}
+                                <div className="w-1/6">
+                                    {/* Line */}
+                                    <div className="w-1 h-full bg-gray-600 rounded relative">
+                                        {/* circle */}
+                                        <div className="absolute w-5 h-5 rounded-full bg-white ring-4 ring-red-400 -left-2"></div>
+                                    </div>
+                                </div>
+                                {/* right */}
+                                <div className="w-1/3"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 {/* SVG Container */}
                 <div className="">
