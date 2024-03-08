@@ -6,7 +6,7 @@ import Image from "next/image";
 const Homepage = () => {
   return (
     <motion.div className="h-full" initial={{ x: "-200vw" }} animate={{ x: "0vw" }} transition={{ duration: 2 }}>
-      <div className="h-full p-4 xl:pb-16 lg:flex-row  gap-4  flex flex-col px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full p-4 pb-48 xl:pb-16 lg:flex-row  gap-4  flex flex-col px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/**Image Container */}
         <div className="h-1/2 lg:h-full lg:w-1/3 relative self-center lg:self-start">
           <Image src="/animeme.png" alt="" width={300} height={300} className="object-contain" />

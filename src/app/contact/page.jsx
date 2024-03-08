@@ -3,7 +3,6 @@ import 'dotenv/config'
 import { motion } from "framer-motion"
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser';
-import { NEXT_PUBLIC_PUBLIC_API_KEY, NEXT_PUBLIC_USER_ID, NEXT_PUBLIC_TEMPLATE_ID } from './variable';
 
 const ContactPage = () => {
     const [success, setSuccess] = useState(false)
@@ -18,8 +17,8 @@ const ContactPage = () => {
         setSuccess(false)
 
         emailjs
-            .sendForm(NEXT_PUBLIC_USER_ID, NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-                publicKey: NEXT_PUBLIC_PUBLIC_API_KEY,
+            .sendForm(process.env.NEXT_PUBLIC_USER_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+                publicKey: process.env.NEXT_PUBLIC_PUBLIC_API_KEY,
             })
             .then(
                 () => {
@@ -37,9 +36,9 @@ const ContactPage = () => {
     const text = "Contact!"
 
     return (
-        <motion.div className="h-full w-screen" initial={{ y: "-200vh" }} animate={{ y: "0vh" }} transition={{ duration: 1 }}>
+        <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0vh" }} transition={{ duration: 1 }}>
             {/*container */}
-            <div className="h-full flex items-center flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
+            <div className="h-full justify-around pb-48 flex items-center flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
                 {/*text container */}
                 <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
                     {/*animated text */}
@@ -59,7 +58,7 @@ const ContactPage = () => {
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="h-1/2 rounded-xl m-3 lg:h-full lg:w-1/2 bg-red-50 flex flex-col justify-center gap-8 p-24 text-xl">
+                    className="h-1/2 w-full rounded-xl m-3 lg:h-full lg:w-1/2 bg-red-50 flex flex-col justify-center gap-8 p-16 text-xl">
                     <span>Dear Aaftab Pinjari,</span>
                     <textarea name="user_message" rows={6} className=" border-b-2 bg-transparent resize-none outline-none border-b-black " />
                     <span>My Email Address is:</span>
