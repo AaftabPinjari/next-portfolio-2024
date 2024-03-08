@@ -17,8 +17,8 @@ const ContactPage = () => {
         setSuccess(false)
 
         emailjs
-            .sendForm(process.env.NEXT_PUBLIC_USER_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-                publicKey: process.env.NEXT_PUBLIC_PUBLIC_API_KEY,
+            .sendForm("service_a3m67m9", "template_eujbcs8", form.current, {
+                publicKey: "f-NEq4aDHbb1EG31v",
             })
             .then(
                 () => {
